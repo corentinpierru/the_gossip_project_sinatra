@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Mon super site de gossip, depuis le dossier views !</h1>
+    <a href="/gossips/new/">tu peux créer un nouveau potin à cette addresse : http://localhost:4567/gossips/new/</a>
+  </body>
+  </html>
+<% gossips.each_with_index do |gossips, index| %>
+  <p>
+    <%= gossips.author %><br/>
+    <%= gossips.content %>
+    <a href="/gossips/<%=index%>" >lien <%=index%> </a>
+  </p>
+<% end %>
