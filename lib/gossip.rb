@@ -29,4 +29,9 @@ class Gossip
     return table[id.to_i]
  end
 
+  def self.update (author, content, identifiant)
+    gossip = []
+    table = CSV.table("db/gossip.csv", headers: false)
+    gossip = table[id.to_i]
+  end 
 end #end of class Gossip
